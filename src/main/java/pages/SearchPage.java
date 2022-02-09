@@ -11,6 +11,9 @@ public class SearchPage extends BasePage {
     @FindBy(css = ".modal-content .close")
     private WebElement popupCloseButton;
 
+    @FindBy(css = "[class='basket-info']  a[href='/basket']")
+    private WebElement popupBasketButton;
+
     @FindBy(xpath = "//div[@class='right-section']//span[@class='item-count']")
     private WebElement itemCountInCart;
 
@@ -21,7 +24,9 @@ public class SearchPage extends BasePage {
         addToCartButton.click();
     }
 
-    public void clickClosePopupButton() {
+    public void clickPopupBasketCheckoutButton(){popupBasketButton.click();}
+
+    public void clickPopupCloseButton() {
         popupCloseButton.click();
     }
 
@@ -32,6 +37,8 @@ public class SearchPage extends BasePage {
     public String getItemCountInCart() {
         return itemCountInCart.getText();
     }
+
+    public WebElement getPopupBasketCheckoutElement(){return popupBasketButton;}
 
     public WebElement getPopupCloseButtonElement(){return popupCloseButton;}
 

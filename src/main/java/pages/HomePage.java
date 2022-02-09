@@ -29,17 +29,29 @@ public class HomePage extends BasePage {
         searchField.submit();
     }
 
-    public boolean isLogoDisplayed(){return logo.isDisplayed();}
+    public boolean isLogoDisplayed() {
+        return logo.isDisplayed();
+    }
 
-    public boolean isSignInButtonDisplayed(){return signInButton.isDisplayed();}
+    public boolean isSignInButtonDisplayed() {
+        return signInButton.isDisplayed();
+    }
 
-    public boolean isSearchFieldDisplayed(){return searchField.isDisplayed();}
+    public boolean isSearchFieldDisplayed() {
+        return searchField.isDisplayed();
+    }
 
-    public boolean isNavigationMenuDisplayed(){return navigationMenu.isDisplayed();}
+    public boolean isNavigationMenuDisplayed() {
+        return navigationMenu.isDisplayed();
+    }
 
-    public boolean isBannerDisplayed(){return banner.isDisplayed();}
+    public boolean isBannerDisplayed() {
+        return banner.isDisplayed();
+    }
 
-    public boolean isCartButtonDisplayed(){return cartButton.isDisplayed();}
+    public boolean isCartButtonDisplayed() {
+        return cartButton.isDisplayed();
+    }
 
     public void openHomePage(String url) {
         driver.get(url);

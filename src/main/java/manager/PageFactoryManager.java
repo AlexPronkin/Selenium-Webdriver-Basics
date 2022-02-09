@@ -1,9 +1,7 @@
 package manager;
 
 import org.openqa.selenium.WebDriver;
-import pages.HomePage;
-import pages.ProductPage;
-import pages.SearchPage;
+import pages.*;
 
 public class PageFactoryManager {
 
@@ -13,12 +11,24 @@ public class PageFactoryManager {
         this.driver = driver;
     }
 
-    public HomePage getHomePage(){
+    public HomePage getHomePage() {
         return new HomePage(driver);
     }
 
-    public SearchPage getSearchPage() { return new SearchPage(driver); }
+    public SearchPage getSearchPage() {
+        return new SearchPage(driver);
+    }
 
-    public ProductPage getProductPage() { return new ProductPage(driver); }
+    public ProductPage getProductPage() {
+        return new ProductPage(driver);
+    }
+
+    public BasketPage getBasketPage() {
+        return new BasketPage(driver);
+    }
+
+    public PaymentPage getPaymentPage() {
+        return new PaymentPage(driver);
+    }
 
 }
